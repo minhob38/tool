@@ -1,0 +1,52 @@
+작업경로에 PR-{Jira Issue Key}.md 파일을 생성
+
+## Interface
+### Input
+`$ARGUMENTS`: Jira Issue Key (예: `AAAA-XXXX`)
+### Output
+`PR-{Jira Issue Key}.md` 파일을 작업경로에 생성
+
+## Work Flow
+Work Item 항목을 참고하여, 아래 순서로 진행
+1. Jira Issue 분석
+2. 코드 분석
+3. PR-{Jira Issue Key}.md 생성
+
+## Work Item
+### Jira Issue 분석
+- Atlassian MCP로 Jira Issue 정보 수집
+  - 코드개발을 한 배경 요약
+  - 요구사항 정리
+
+### 코드 분석
+- commit을 기반으로 변경된 코드 분석
+  - 변경된 주요 코드 설명
+  - 생성된 리소스 (아래 항목에 해당되는 경우)
+    - DB Table
+    - Cloud(AWS, Azure, GCP etc)
+
+### PR-{Jira Issue Key}.md 생성
+다음 구조의 `PR-{Jira Issue Key}.md`를 생성합니다:
+```
+# 제목
+- PR을 바로 이해할 수 있는 제목 생성
+
+# 배경
+- 코드변경 배경에 대해 간단히 설명
+
+# 아키텍처 
+- ASCII 또는 텍스트 기반 흐름도 (해당되는 경우)
+
+# 요구사항
+- 제품의 요구사항
+
+# 변경사항
+- 변경된 코드에 대한 간단한 설명
+
+# 리소스
+생성되는 CSP(AWS, Azure, GCP 등) Cloud 리소스 목록 (테이블 형식)
+```
+
+## Remarks
+- 코드의 실제 구현을 기반으로 정확한 문서를 작성
+- 한국어로 작성
