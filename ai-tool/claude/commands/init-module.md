@@ -1,3 +1,4 @@
+# Create CLAUD.md for module
 ## Inferface
 ### Input
 `$ARGUMENTS`: 코드분석 및 `CLAUDE.MD`를 생성할 모듈의 경로 (예: `infrastructure/modules/s3-bucket`, `services/user-authentication`)
