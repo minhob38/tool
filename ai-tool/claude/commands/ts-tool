@@ -1,0 +1,64 @@
+지정된 디렉토리에 typescript 프로젝트를 생성합니다.
+
+## Interface
+### Input
+`$ARGUMENTS`: typescript 프로젝트를 만들 경로 (예: `tool/my-tool`)
+
+### Output
+typescript 프로젝트를 ``$ARGUMENTS`에 생성
+
+## Work Item
+### app.ts 생성
+```ts
+import dotenv from "dotenv";
+dotenv.config();
+
+const app = async () => {
+  console.log('my tool 🚀');
+};
+
+app()
+  .then(() => console.log(`[MyTool] my-tool`))
+  .catch((error) => {
+    console.log(`[MyTool] tool failed: ${error}`);
+  });
+
+```
+
+### package.json 생성
+```
+{
+  "name": "my-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "format": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": {lastest version},
+    "ts-node": {lastest version},
+    "typescript": {lastest version}
+  }
+}
+
+### .gitignore 생성
+```
+.env
+node_modules/
+dist/
+```
+
+
+### .env 생성
+```
+```
+
+## Remarks
+- N/A
